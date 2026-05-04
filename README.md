@@ -2,7 +2,7 @@
 
 Clean standalone packaging of the validated Catani-Seymour `pp -> t tbar` NLO code at 8 TeV.
 
-This package contains the local analytic Born, color-correlation, collinear-counterterm, virtual, and integrated-dipole code needed to reproduce the validated scalar 8 TeV baseline without any MATRIX or OpenLoops runtime calls.
+This package contains the local analytic Born, color-correlation, collinear-counterterm, virtual, and integrated-dipole code needed to reproduce the validated scalar 8 TeV baseline and compared to top++.
 
 Current scope:
 
