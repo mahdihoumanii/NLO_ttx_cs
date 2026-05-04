@@ -1,0 +1,22 @@
+calculation	pp_to_ttbar_NLO_CS_8TeV
+beam_energy_GeV	4.00000000000000000e+03
+hadronic_s_GeV2	6.40000000000000000e+07
+mt_GeV	1.73300000000000011e+02
+muF_GeV	1.73199999999999989e+02
+muR_GeV	1.73199999999999989e+02
+pdf_set	NNPDF31_nlo_as_0118
+pdf_member	0
+lo_samples	1000000
+seed	8675309
+elapsed_seconds	1.36030341699999990e+00
+nlo_total	2.18190082912197453e+05
+nlo_standard_error	5.48526128469815831e+02
+runtime_subprocess_policy	no MATRIX/OpenLoops executable calls in this assembly program
+strict_local_runtime_status	LO is integrated locally in this program; RA, CA, and VA are supplied from local artifacts
+
+Component breakdown
+component	value_fb	standard_error_fb	source
+LO	1.47766442986760638e+05	3.90296118154572355e+02	apps/run_full_nlo_8tev.cpp local Born integration
+RA	-5.27217796472052578e+03	1.24132041618725822e+02	validation/local_ra_integral_all_channels_100k_refresh.txt
+CA	8.86833270958016219e+04	3.63896431181217224e+02	validation/local_ca_integral_all_channels_1M.txt
+VA	-1.29875092056442827e+04	2.68417097946023233e+01	validation/local_va_integral_all_channels_1M.txt

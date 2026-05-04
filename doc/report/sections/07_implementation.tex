@@ -1,0 +1,103 @@
+\section{Implementation Strategy}
+
+The subtraction formalism is implemented at the level of the Monte Carlo
+integrand, where each phase-space point contributes a finite weight.
+Particular care is taken to follow closely the structure of modern
+integrators such as the Munich framework used in MATRIX.
+
+\subsection{Monte Carlo weight}
+
+At each phase-space point, the weight is given by
+\begin{align}
+w =
+\frac{1}{2\hat{s}} \,
+f_a(x_1,\mu_F) \, f_b(x_2,\mu_F)
+\, d\Phi \,
+\alpha_s^n(\mu_R)
+\, |M|^2,
+\end{align}
+where $\hat{s} = x_1 x_2 s$ and $d\Phi$ includes all Jacobians from the
+phase-space mappings.
+
+\subsection{Local subtraction at the integrand level}
+
+The real-emission contribution is evaluated as
+\begin{align}
+\mathcal{R}_{\text{finite}} =
+|M_{m+1}|^2 - \sum_{\text{dipoles}} D_{ij,k},
+\end{align}
+which is finite at every phase-space point.
+
+The virtual contribution is combined with the integrated dipoles:
+\begin{align}
+\mathcal{V}_{\text{finite}} =
+|M_m^{\text{1-loop}}|^2 + \langle M_m | \mathbf{I} | M_m \rangle.
+\end{align}
+
+\subsection{Multichannel phase-space sampling}
+
+Following the strategy used in Munich, the phase space is sampled using
+a multichannel approach. The idea is to construct a probability density
+as a weighted sum over different phase-space channels:
+\begin{align}
+g_{\text{MC}}(x) = \sum_c \alpha_c \, g_c(x),
+\end{align}
+where:
+\begin{itemize}
+    \item $g_c(x)$ are individual channel densities adapted to specific
+    kinematic structures (e.g. soft or collinear regions),
+    \item $\alpha_c$ are channel weights satisfying $\sum_c \alpha_c = 1$.
+\end{itemize}
+
+Each channel is designed to capture a particular singular behavior of
+the matrix element, improving the efficiency of the integration.
+
+\subsection{Adaptive integration (VEGAS)}
+
+On top of the multichannel structure, an adaptive VEGAS algorithm is used
+to refine the sampling of the integration variables.
+
+The VEGAS procedure builds an importance-sampling grid for each integration
+dimension, iteratively updating the sampling density according to
+\begin{align}
+g(x) \propto |w(x)|.
+\end{align}
+
+This allows the integrator to concentrate sampling in regions where the
+integrand is large, such as near infrared-sensitive configurations.
+
+\subsection{Combination of multichannel and VEGAS}
+
+The final sampling density is given by the combination of both strategies:
+\begin{itemize}
+    \item the multichannel decomposition captures the global structure
+    of the phase space,
+    \item the VEGAS adaptation refines the sampling locally.
+\end{itemize}
+
+This mirrors the approach used in Munich, where both techniques are used
+together to achieve stable and efficient integration of NLO contributions.
+
+\subsection{Hadronic convolution}
+
+The hadronic cross section is obtained as
+\begin{align}
+\sigma =
+\sum_{a,b} \int dx_1 dx_2 \,
+f_a(x_1,\mu_F) f_b(x_2,\mu_F)
+\left[
+\int d\Phi_{m+1} \, \mathcal{R}_{\text{finite}}
++
+\int d\Phi_m \, \mathcal{V}_{\text{finite}}
+\right].
+\end{align}
+
+\subsection{Numerical stability}
+
+The combination of local subtraction, multichannel sampling,
+and adaptive VEGAS integration ensures that:
+\begin{itemize}
+    \item the integrand remains finite across the entire phase space,
+    \item singular regions are efficiently sampled,
+    \item the Monte Carlo integration converges reliably.
+\end{itemize}

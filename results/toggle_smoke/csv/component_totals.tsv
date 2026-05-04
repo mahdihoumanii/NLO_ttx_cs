@@ -1,0 +1,6 @@
+component	value_fb	standard_error_fb	source	artifact_only	has_histogram
+LO	1.12560020166082832e+05	3.47185652432059869e+04	local Monte Carlo (analytic Born)	0	1
+RA	-5.31826111214702632e+03	1.25333044528322603e+02	/Users/mahdihoumani/Documents/Work/CataniSeymour/cs_ppttb/validation/scale_variations/local_ra_integral_mt173_mu_1p0mt_100k.txt	1	1
+CA	1.03389519328495604e+05	5.16705800411039236e+04	local Monte Carlo (analytic collinear counterterm)	0	1
+VA	-1.76599775677662838e+04	2.84783121220029216e+03	local Monte Carlo (analytic virtual+integrated dipoles)	0	1
+NLO	1.92971300814665155e+05	6.23165585163053620e+04	assembled	0	1

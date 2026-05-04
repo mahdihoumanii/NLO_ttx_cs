@@ -1,0 +1,33 @@
+package	cs_ppttb
+config	/Users/mahdihoumani/Documents/Work/CataniSeymour/cs_ppttb/config/default_8tev.cfg
+sqrt_s_gev	8.00000000000000000e+03
+mt_gev	1.73300000000000011e+02
+muF_gev	1.73199999999999989e+02
+muR_gev	1.73199999999999989e+02
+pdf_set	NNPDF31_nlo_as_0118
+pdf_member	0
+observable	mtt
+lo_samples	10000
+ca_samples	10000
+va_samples	10000
+seed	8675309
+nlo_total_fb	2.17939326312376856e+05
+nlo_total_pb	2.17939326312376863e+02
+nlo_standard_error_fb	5.26476190474783834e+03
+nlo_standard_error_pb	5.26476190474783845e+00
+ra_mode	artifact
+distributions	4
+distribution	mtt	bins=40	min=3.46600000000000023e+02	max=8.00000000000000000e+03	lo=1	nlo=0	has_ra_histogram=0
+distribution	top_pt	bins=100	min=0.00000000000000000e+00	max=5.00000000000000000e+02	lo=0	nlo=0	has_ra_histogram=0
+distribution	tb_pt	bins=100	min=0.00000000000000000e+00	max=5.00000000000000000e+02	lo=0	nlo=0	has_ra_histogram=0
+distribution	ytt	bins=80	min=-4.00000000000000000e+00	max=4.00000000000000000e+00	lo=0	nlo=0	has_ra_histogram=0
+
+Component breakdown
+component	value_fb	standard_error_fb	source	artifact_only	has_histogram
+LO	1.46953219665376324e+05	3.87984119869399501e+03	local Monte Carlo (analytic Born)	0	1
+RA	-5.27217796472052578e+03	1.24132041618725822e+02	/Users/mahdihoumani/Documents/Work/CataniSeymour/cs_ppttb/validation/local_ra_integral_all_channels_100k_refresh.txt	1	0
+CA	8.92732205644523638e+04	3.54716310315204464e+03	local Monte Carlo (analytic collinear counterterm)	0	1
+VA	-1.30149359527313172e+04	2.58409253861299646e+02	local Monte Carlo (analytic virtual+integrated dipoles)	0	1
+
+Notes
+- RA is intentionally packaged as a validated artifact until a fully local spin-correlated real-emission kernel is implemented.

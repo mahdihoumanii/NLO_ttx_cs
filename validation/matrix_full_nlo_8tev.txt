@@ -1,0 +1,31 @@
+MATRIX full NLO component reference: pp -> ttbar, 8 TeV
+=========================================================
+
+Setup
+-----
+MATRIX root: /Users/mahdihoumani/Softwares/MATRIX_v2.2.0.beta1
+Process tree: run/ppttx20/default.MATRIX
+mt = 173.3 GeV
+muF = muR = 173.2 GeV
+PDFs for NLO components: NNPDF31_nlo_as_0118 member 0
+
+Component summary
+-----------------
+component	value_fb	standard_error_fb	source
+LO	1.47924244926325890e+05	3.15559898119994500e+02	NLO/20/born/matrix_born_all_1M
+RA	-5.19817247901197970e+03	1.23251330056951502e+02	NLO.CS/30/RA.QCD/matrix_highstat_all_100k
+CA	8.88650868768933142e+04	3.62028299052911223e+02	NLO.CS/30/CA.QCD/matrix_ca_all_1M
+VA	-1.30209964999999993e+04	2.68909999999999982e+01	NLO.CS/30/VA.QCD/matrix_va_all_1M
+NLO_total	2.18570162824207218e+05	4.96544615174158366e+02	quadrature assembly of independent component runs
+
+MATRIX Born per subprocess
+--------------------------
+subprocess	N_generated	value_fb	standard_error_fb
+gg_tt~	1000000	1.16813950574943000e+05	3.09507701390897000e+02
+dd~_tt~	1000000	1.22858134373626000e+04	3.35905926122553000e+01
+uu~_tt~	1000000	1.86492987726758000e+04	5.15205398445873000e+01
+bb~_tt~	1000000	1.75182141344494000e+02	5.81500906634986000e-01
+
+Notes
+-----
+The LO/Born reference was run separately in NLO/20/born/matrix_born_all_1M so it uses the NLO/Born contribution setup rather than the pure LO contribution tree.

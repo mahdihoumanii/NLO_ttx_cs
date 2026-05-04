@@ -1,0 +1,26 @@
+cs_ppttb validated scalar baseline
+=================================
+
+Configuration
+- sqrt(s) = 8000 GeV
+- mt = 173.3 GeV
+- muF = muR = 173.2 GeV
+- PDF = NNPDF31_nlo_as_0118, member 0
+
+Packaged component sources
+- LO: local Monte Carlo inside cs_ppttb
+- RA: validation/local_ra_integral_all_channels_100k_refresh.txt
+- CA: local Monte Carlo inside cs_ppttb
+- VA: local Monte Carlo inside cs_ppttb
+
+Frozen validated totals
+- LO = 1.47766442986760638e+05 +/- 3.90296118154572355e+02 fb
+- RA = -5.27217796472052578e+03 +/- 1.24132041618725822e+02 fb
+- CA = 8.86833270958016219e+04 +/- 3.63896431181217224e+02 fb
+- VA = -1.29875092056442827e+04 +/- 2.68417097946023233e+01 fb
+- NLO = 2.18190082912197453e+05 +/- 5.48526128469815831e+02 fb
+
+Validation note
+- This package intentionally contains no MATRIX or OpenLoops runtime path.
+- The scalar NLO baseline is therefore assembled from local LO/CA/VA runs plus the validated RA total artifact.
+- A fully local spin-correlated RA runtime remains future work.

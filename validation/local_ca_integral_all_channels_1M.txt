@@ -1,0 +1,18 @@
+subprocess	all
+subprocess_count	4
+sampling_mode	standalone_MATRIX_Born_phase_space_CA_z_mapping
+N_generated_per_subprocess	1000000
+N_generated_total	4000000
+N_accepted_total	4000000
+integral_estimate	8.86833270958016219e+04
+standard_error	3.63896431181217224e+02
+seed	0
+elapsed_seconds	3.00823633330000000e+01
+samples_are_generated_trials	1
+
+Per-subprocess
+subprocess	phase_space	phase_channels	N_generated	N_accepted	integral	standard_error
+gg_tt~	gg_ttx 2 0 0	3	1000000	1000000	8.01756764385015413e+04	3.63226589828363046e+02
+dd~_tt~	ddx_ttx 2 0 0	1	1000000	1000000	3.39567038200351044e+03	1.20377476516998829e+01
+uu~_tt~	uux_ttx 2 0 0	1	1000000	1000000	5.08769790044937872e+03	1.84918908447817287e+01
+bb~_tt~	bbx_ttx 2 0 0	1	1000000	1000000	2.42823748472027248e+01	4.46847337648697940e-01

@@ -1,0 +1,27 @@
+package	cs_ppttb
+config	/Users/mahdihoumani/Documents/Work/CataniSeymour/cs_ppttb/config/default_8tev.cfg
+sqrt_s_gev	8.00000000000000000e+03
+mt_gev	1.73300000000000011e+02
+muF_gev	1.73199999999999989e+02
+muR_gev	1.73199999999999989e+02
+pdf_set	NNPDF31_nlo_as_0118
+pdf_member	0
+lo_samples	2000
+ca_samples	2000
+va_samples	2000
+seed	8675309
+nlo_total_fb	1.39337966335834237e+05
+nlo_standard_error_fb	1.17188014534147824e+04
+ra_mode	artifact
+
+Component breakdown
+component	value_fb	standard_error_fb	source	artifact_only	has_histogram
+LO	1.44573513277022983e+05	8.89445350511135985e+03	local Monte Carlo (analytic Born)	0	1
+RA	-5.27217796472052578e+03	1.24132041618725822e+02	/Users/mahdihoumani/Documents/Work/CataniSeymour/cs_ppttb/validation/local_ra_integral_all_channels_100k_refresh.txt	1	0
+CA	4.28467359766680502e+01	7.60791271559681445e+03	local Monte Carlo (analytic collinear counterterm)	0	1
+VA	-6.21571244489021879e+00	5.68559317989351712e+02	local Monte Carlo (analytic virtual+integrated dipoles)	0	1
+
+Notes
+- NLO differential histogram was not assembled because the packaged RA input is a total-only artifact.
+- Provide ra_histogram_csv in the config once a local or validated external RA differential histogram is available.
+- RA is intentionally packaged as a validated artifact until a fully local spin-correlated real-emission kernel is implemented.

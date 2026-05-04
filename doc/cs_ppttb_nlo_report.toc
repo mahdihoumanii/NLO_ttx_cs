@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}NLO structure}{3}{section.2}%
+\contentsline {section}{\numberline {3}Partonic channels and flavor structure}{3}{section.3}%
+\contentsline {section}{\numberline {4}Hadronic phase space and Born kinematics}{4}{section.4}%
+\contentsline {section}{\numberline {5}Real phase space and sampling weights}{5}{section.5}%
+\contentsline {section}{\numberline {6}Catani--Seymour dipoles}{5}{section.6}%
+\contentsline {section}{\numberline {7}Virtual term and the $X$ counterterm}{6}{section.7}%
+\contentsline {section}{\numberline {8}$P$ and $K$ terms and the finite collinear contribution}{6}{section.8}%
+\contentsline {section}{\numberline {9}Standalone implementation}{6}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Package scope and executable}{6}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Module map}{7}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Monte Carlo integration strategy}{7}{section.10}%
+\contentsline {section}{\numberline {11}Validation against MATRIX}{8}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Real, collinear, and virtual components}{8}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Full 8 TeV NLO assembly}{8}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Standalone package baseline}{9}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Differential $m_{t\bar t}$ results and MadGraph comparison}{9}{section.12}%
+\contentsline {section}{\numberline {13}Discussion}{12}{section.13}%
+\contentsline {section}{\numberline {14}Conclusion}{12}{section.14}%
+\contentsline {section}{\numberline {A}Jacobian and weight formulas}{13}{appendix.A}%
+\contentsline {section}{\numberline {B}Representative subprocess tables}{13}{appendix.B}%
+\contentsline {section}{\numberline {C}Configuration example and command lines}{13}{appendix.C}%
+\contentsline {section}{\numberline {D}Validation and plot paths used in this report}{14}{appendix.D}%

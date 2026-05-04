@@ -1,0 +1,42 @@
+gg_ttx 2 0 0
+smin 0 | 
+smax 0 | 
+p 0 | 
+f 0 | 
+t 2 | 6 12 1 2 4 8 | 6 12 1 2 8 4 | 
+d 1 | 12 4 8 | 
+channel 3 | - - 0 - | - - 1 - | - - - 0 | 
+tau 1 | 0 | 
+
+ddx_ttx 2 0 0
+ssx_ttx 2 0 0
+smin 0 | 
+smax 0 | 
+p 0 | 
+f 0 | 
+t 0 | 
+d 1 | 12 4 8 | 
+channel 1 | - - - 0 | 
+tau 1 | 0 | 
+
+uux_ttx 2 0 0
+ccx_ttx 2 0 0
+smin 0 | 
+smax 0 | 
+p 0 | 
+f 0 | 
+t 0 | 
+d 1 | 12 4 8 | 
+channel 1 | - - - 0 | 
+tau 1 | 0 | 
+
+bbx_ttx 2 0 0
+smin 0 | 
+smax 0 | 
+p 0 | 
+f 0 | 
+t 0 | 
+d 1 | 12 4 8 | 
+channel 1 | - - - 0 | 
+tau 1 | 0 | 
+

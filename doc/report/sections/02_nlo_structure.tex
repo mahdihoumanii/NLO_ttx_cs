@@ -1,0 +1,53 @@
+\section{Infrared Structure of QCD Amplitudes}
+
+The divergences appearing at NLO originate from universal properties
+of QCD amplitudes in specific kinematic limits.
+These limits are independent of the details of the process and are
+completely determined by the gauge structure of the theory.
+
+\subsection{Soft limit}
+
+When a gluon with momentum $q$ becomes soft ($q \to 0$),
+the squared matrix element factorizes as
+\begin{align}
+|M_{m+1}|^2 \xrightarrow{q \to 0}
+\sum_{i,k}
+\frac{2 p_i \cdot p_k}{(p_i \cdot q)(p_k \cdot q)}
+\langle M_m | \mathbf{T}_i \cdot \mathbf{T}_k | M_m \rangle.
+\end{align}
+
+This expression is known as the eikonal factor.
+It shows that the emission probability becomes singular when the gluon energy
+goes to zero, and that the singularity depends on color correlations
+between all pairs of hard partons.
+
+\subsection{Collinear limit}
+
+When two partons $i$ and $j$ become collinear,
+their momenta satisfy
+\begin{align}
+p_i \parallel p_j,
+\end{align}
+and the matrix element behaves as
+\begin{align}
+|M_{m+1}|^2 \xrightarrow{ij \text{ collinear}}
+\frac{1}{p_i \cdot p_j}
+P_{ij}(z)
+|M_m|^2.
+\end{align}
+
+Here, $P_{ij}(z)$ are the Altarelli--Parisi splitting functions,
+which describe the probability of a parton splitting into two collinear partons.
+
+\subsection{Interpretation}
+
+These limits show that:
+\begin{itemize}
+    \item soft divergences are associated with low-energy gluon emission,
+    \item collinear divergences arise from parton splittings,
+    \item both types of divergences factorize universally.
+\end{itemize}
+
+The role of the subtraction method is to construct counterterms
+that locally reproduce these singular behaviors, allowing for a stable
+numerical evaluation of the real-emission contribution.

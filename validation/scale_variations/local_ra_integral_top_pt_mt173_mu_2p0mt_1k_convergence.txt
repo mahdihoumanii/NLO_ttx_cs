@@ -1,0 +1,2 @@
+subprocess	N_subprocesses	N_generated_per_subprocess	N_generated_total	N_accepted_total	integral	error	error_times_sqrt_N_per_subprocess	MATRIX_reference	MATRIX_reference_error	difference	combined_error	pull_vs_reference	pull_vs_reference_local_error_only	elapsed_seconds
+all	10	1000	10000	9934	-2.25980519679693998e+03	7.29007591775604624e+02	2.30532442156514408e+04	nan	nan	nan	nan	nan	nan	1.35254683399999998e+00

@@ -1,0 +1,86 @@
+\section{Phase Space Factorization and Mapping}
+
+A central ingredient of the Catani--Seymour subtraction method is the
+exact factorization of the $(m+1)$-particle phase space into an
+$m$-particle phase space and an unresolved emission measure.
+
+\subsection{Phase-space definition}
+
+The $(m+1)$-particle phase space is defined as
+\begin{align}
+d\Phi_{m+1}(P; p_1,\dots,p_{m+1}) =
+\left( \prod_{i=1}^{m+1} \frac{d^3 p_i}{(2\pi)^3 2E_i} \right)
+(2\pi)^4 \delta^{(4)}\!\left(P - \sum_{i=1}^{m+1} p_i \right).
+\end{align}
+
+For subtraction to work, this phase space must be rewritten in terms of
+a reduced $m$-particle configuration.
+
+\subsection{Factorization}
+
+For each dipole $(ij,k)$, the phase space can be factorized as
+\begin{align}
+d\Phi_{m+1}(p_1,\dots,p_{m+1}) =
+d\Phi_m(\tilde{p}_1,\dots,\tilde{p}_m)
+\, [dp_i(\tilde{p}_{ij}, \tilde{p}_k)],
+\end{align}
+where:
+\begin{itemize}
+    \item $\tilde{p}$ denotes mapped momenta,
+    \item $[dp_i]$ is the dipole phase-space measure associated with the
+    unresolved emission.
+\end{itemize}
+
+This factorization is exact and includes a non-trivial Jacobian.
+
+\subsection{Momentum mapping}
+
+The mapping $(p_i, p_j, p_k) \to (\tilde{p}_{ij}, \tilde{p}_k)$ is constructed such that:
+\begin{align}
+\tilde{p}_{ij} + \tilde{p}_k = p_i + p_j + p_k,
+\end{align}
+and:
+\begin{align}
+\tilde{p}_{ij}^2 = p_{ij}^2, \quad \tilde{p}_k^2 = p_k^2.
+\end{align}
+
+A commonly used mapping (final-final case) is:
+\begin{align}
+\tilde{p}_{ij}^\mu &= p_i^\mu + p_j^\mu - \frac{y_{ij,k}}{1 - y_{ij,k}} p_k^\mu, \\
+\tilde{p}_k^\mu &= \frac{1}{1 - y_{ij,k}} p_k^\mu,
+\end{align}
+with:
+\begin{align}
+y_{ij,k} = \frac{p_i \cdot p_j}{p_i \cdot p_j + p_j \cdot p_k + p_k \cdot p_i}.
+\end{align}
+
+\subsection{Dipole phase-space measure}
+
+The unresolved phase-space factor can be written as
+\begin{align}
+[dp_i(\tilde{p}_{ij}, \tilde{p}_k)] =
+\frac{(1 - y_{ij,k})^{d-3}}{16\pi^2}
+\, (p_{ij,k}^2)^{1-\epsilon}
+\, dy_{ij,k} \, dz_i \, d\phi,
+\end{align}
+where:
+\begin{itemize}
+    \item $y_{ij,k}$ controls the invariant mass of the splitting,
+    \item $z_i$ is the energy fraction,
+    \item $\phi$ is the azimuthal angle.
+\end{itemize}
+
+\subsection{Role in the implementation}
+
+This factorization allows the real-emission contribution to be rewritten as:
+\begin{align}
+\int d\Phi_{m+1} \, d\sigma^R =
+\int d\Phi_m \int [dp_i] \, d\sigma^R.
+\end{align}
+
+The subtraction term uses the same mapping, ensuring that:
+\begin{itemize}
+    \item both $d\sigma^R$ and $d\sigma^A$ are evaluated consistently,
+    \item the difference remains finite,
+    \item the integrated dipoles can be computed analytically.
+\end{itemize}

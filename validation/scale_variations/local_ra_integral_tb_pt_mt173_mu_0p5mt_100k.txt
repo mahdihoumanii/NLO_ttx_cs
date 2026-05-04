@@ -1,0 +1,30 @@
+subprocess	all
+subprocess_count	10
+sampling_mode	standalone_MATRIX_MUNICH_rng_randomvariable_multichannel
+N_generated_per_subprocess	100000
+N_generated_total	1000000
+N_accepted_total	993943
+integral_estimate	-8.67659427491160750e+03
+standard_error	1.95248810074372244e+02
+MATRIX_reference	nan
+MATRIX_reference_error	nan
+difference	nan
+combined_error	nan
+pull_vs_reference	nan
+pull_vs_reference_local_error_only	nan
+n_shift_run	0
+elapsed_seconds	1.41379265792000012e+02
+samples_are_generated_trials	1
+
+Per-subprocess
+subprocess	real_channel	real_phase_space	phase_channels	dipoles	N_generated	N_accepted	integral	standard_error
+gg_tt~g	gg -> ttbar g	gg_ttxg 3 0 0	51	12	100000	98470	-3.83495104507185533e+03	1.60038642643238802e+02
+gd_tt~d	gq -> ttbar q	gd_ttxd 3 0 0	17	6	100000	100000	-1.64776684160853301e+03	4.65001430678914289e+01
+gu_tt~u	gq -> ttbar q	gu_ttxu 3 0 0	17	6	100000	100000	-3.69185885405749013e+03	9.94638737454794750e+01
+gb_tt~b	gq -> ttbar q	gb_ttxb 3 0 0	17	6	100000	100000	-3.48685954457703389e+01	1.29973002817421568e+00
+gd~_tt~d~	gqbar -> ttbar qbar	gdx_ttxdx 3 0 0	17	6	100000	100000	-3.79299381367266108e+02	1.27363507676915866e+01
+gu~_tt~u~	gqbar -> ttbar qbar	gux_ttxux 3 0 0	17	6	100000	100000	-2.70478206961740568e+02	9.05235483756378656e+00
+gb~_tt~b~	gqbar -> ttbar qbar	gbx_ttxbx 3 0 0	17	6	100000	100000	-3.47648452453842225e+01	1.29896069703532979e+00
+dd~_tt~g	qqbar -> ttbar g	ddx_ttxg 3 0 0	17	12	100000	98491	4.75827040712424832e+02	7.74066341028033822e+00
+uu~_tt~g	qqbar -> ttbar g	uux_ttxg 3 0 0	17	12	100000	98491	7.37261993628703408e+02	1.21220689510225323e+01
+bb~_tt~g	qqbar -> ttbar g	bbx_ttxg 3 0 0	17	12	100000	98491	4.30446050530334290e+00	8.01802401691659034e-02

@@ -1,0 +1,26 @@
+package	cs_ppttb
+config	/Users/mahdihoumani/Documents/Work/CataniSeymour/cs_ppttb/config/generated/scale_variations/ytt_madgraph_reference_8tev_mu_2p0mt.cfg
+sqrt_s_gev	8.00000000000000000e+03
+mt_gev	1.73000000000000000e+02
+muF_gev	3.46000000000000000e+02
+muR_gev	3.46000000000000000e+02
+pdf_set	NNPDF31_nlo_as_0118
+pdf_member	0
+observable	y_tt
+lo_samples	1000000
+ca_samples	1000000
+va_samples	1000000
+seed	8675309
+nlo_total_fb	1.92267624211715127e+05
+nlo_standard_error_fb	4.40778610333018719e+02
+ra_mode	artifact
+
+Component breakdown
+component	value_fb	standard_error_fb	source	artifact_only	has_histogram
+LO	1.13718346063007397e+05	3.00759022550684108e+02	local Monte Carlo (analytic Born)	0	1
+RA	-3.39944334950508664e+03	8.37567055121738662e+01	/Users/mahdihoumani/Documents/Work/CataniSeymour/cs_ppttb/validation/scale_variations/local_ra_integral_ytt_mt173_mu_2p0mt_100k.txt	1	1
+CA	7.22118503011733555e+04	3.09135124151660705e+02	local Monte Carlo (analytic collinear counterterm)	0	1
+VA	9.73687119703945427e+03	3.53565125393973503e+01	local Monte Carlo (analytic virtual+integrated dipoles)	0	1
+
+Notes
+- RA is intentionally packaged as a validated artifact until a fully local spin-correlated real-emission kernel is implemented.

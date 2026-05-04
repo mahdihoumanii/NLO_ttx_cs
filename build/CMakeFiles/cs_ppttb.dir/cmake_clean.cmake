@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/cs_ppttb.dir/apps/cs_ppttb.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/apps/cs_ppttb.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/born.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/born.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/color_correlation.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/color_correlation.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_born_correlations.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_born_correlations.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_ca_integrand.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_ca_integrand.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_config.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_config.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_ct_shift.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_ct_shift.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_dipole_metadata.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_dipole_metadata.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_ioperator.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_ioperator.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_kinematics.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_kinematics.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_phasespace.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_phasespace.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_plot.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_plot.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_runner.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_runner.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_va_integrand.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_va_integrand.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/cs_va_kernel.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/cs_va_kernel.cpp.o.d"
+  "CMakeFiles/cs_ppttb.dir/src/virtual.cpp.o"
+  "CMakeFiles/cs_ppttb.dir/src/virtual.cpp.o.d"
+  "bin/cs_ppttb"
+  "bin/cs_ppttb.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/cs_ppttb.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

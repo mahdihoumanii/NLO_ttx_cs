@@ -1,0 +1,63 @@
+\section{Dipole Subtraction Terms}
+
+The central idea of the Catani--Seymour method is to construct
+local counterterms that reproduce the infrared behavior of the
+real-emission matrix element in all singular limits.
+
+These counterterms are written as a sum over dipoles:
+\begin{align}
+d\sigma^A = \sum_{\text{dipoles}} D_{ij,k}.
+\end{align}
+
+Each dipole is associated with:
+\begin{itemize}
+    \item an emitter pair $(i,j)$,
+    \item a spectator parton $k$.
+\end{itemize}
+
+The role of the spectator is to ensure momentum conservation
+and to absorb recoil in the phase-space mapping.
+
+\subsection{General structure of a dipole}
+
+A dipole term has the general form
+\begin{align}
+D_{ij,k} =
+-\frac{1}{2 p_i \cdot p_j}
+\langle M_m(\tilde{p}) |
+\mathbf{T}_k \cdot \mathbf{T}_{ij}
+\, V_{ij,k}
+| M_m(\tilde{p}) \rangle,
+\end{align}
+where:
+\begin{itemize}
+    \item $\tilde{p}$ denotes mapped $m$-particle momenta,
+    \item $\mathbf{T}_i$ are color charge operators,
+    \item $V_{ij,k}$ is the dipole splitting kernel.
+\end{itemize}
+
+\subsection{Physical interpretation}
+
+Each dipole term is constructed such that:
+\begin{itemize}
+    \item in the soft limit, it reproduces the eikonal factor,
+    \item in the collinear limit, it reproduces the splitting functions,
+    \item away from singular regions, it remains finite.
+\end{itemize}
+
+The subtraction term is therefore a local approximation of the real matrix element:
+\begin{align}
+d\sigma^R \approx d\sigma^A \quad \text{in all singular limits}.
+\end{align}
+
+\subsection{Local cancellation}
+
+By construction, the difference
+\begin{align}
+d\sigma^R - d\sigma^A
+\end{align}
+is finite everywhere in phase space and can be integrated numerically
+without encountering divergences.
+
+This local cancellation is the key advantage of the Catani--Seymour method,
+as it allows for stable Monte Carlo integration.

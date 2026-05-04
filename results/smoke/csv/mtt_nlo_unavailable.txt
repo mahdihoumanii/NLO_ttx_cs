@@ -1,0 +1,3 @@
+NLO differential histogram was not assembled because the packaged RA input is a total-only artifact.
+Provide ra_histogram_csv in the config once a local or validated external RA differential histogram is available.
+RA is intentionally packaged as a validated artifact until a fully local spin-correlated real-emission kernel is implemented.

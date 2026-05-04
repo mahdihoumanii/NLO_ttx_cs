@@ -1,0 +1,21 @@
+subprocess	all
+MATRIX_run	/Users/mahdihoumani/Softwares/MATRIX_v2.2.0.beta1/run/ppttx20/default.MATRIX/NLO.CS/30/CA.QCD/matrix_ca_all_1M
+standalone_run	validation/local_ca_integral_all_channels_1M.txt
+samples_per_subprocess	1000000
+MATRIX_total	8.88650868768933142e+04
+MATRIX_total_error	3.62028299052911223e+02
+standalone_total	8.86833270958016219e+04
+standalone_total_error	3.63896431181217224e+02
+standalone_minus_MATRIX	-1.81759781091692275e+02
+combined_error	5.13307999101485279e+02
+pull	-3.54094971069712161e-01
+status	PASS
+
+Per-subprocess
+subprocess	MATRIX_generated	MATRIX_integral	MATRIX_error	standalone_generated	standalone_accepted	standalone_integral	standalone_error	difference	combined_error	pull
+gg_tt~	1000000	8.03647041586972980e+04	3.61353063569451997e+02	1000000	1000000	8.01756764385015413e+04	3.63226589828363046e+02	-1.89027720195756661e+02	5.12355226140456094e+02	-3.68922955204521871e-01
+dd~_tt~	1000000	3.39038884569709979e+03	1.20590701011659996e+01	1000000	1000000	3.39567038200351044e+03	1.20377476516998829e+01	5.28153630641064842e+00	1.70390241201236361e+01	3.09967203057989996e-01
+uu~_tt~	1000000	5.08593360083683974e+03	1.85157423131981014e+01	1000000	1000000	5.08769790044937872e+03	1.84918908447817287e+01	1.76429961253897848e+00	2.61783636696581498e+01	6.73967195681537052e-02
+bb~_tt~	1000000	2.40602716620682014e+01	4.45958520614781002e-01	1000000	1000000	2.42823748472027248e+01	4.46847337648697940e-01	2.22103185134523464e-01	6.31211985673208758e-01	3.51870830437404197e-01
+
+notes	Both runs use 1M generated trials per CA subprocess representative (gg_tt~, dd~_tt~, uu~_tt~, bb~_tt~) with generated-trial normalization. MATRIX CA run used per-subprocess redirected stdin via log/<subprocess>.in in matrix_ca_all_1M/run_matrix_all.sh. Total errors are quadrature sums of independent subprocess errors.

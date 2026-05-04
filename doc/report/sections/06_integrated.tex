@@ -1,0 +1,66 @@
+\section{Integrated Dipoles and Virtual Cancellation}
+
+The subtraction term $d\sigma^A$ is constructed to reproduce the singular
+behavior of the real-emission contribution. In order to combine it with
+the virtual corrections, it must be integrated analytically over the
+unresolved phase space.
+
+\subsection{Integrated subtraction term}
+
+The integration of the subtraction term over the unresolved emission
+leads to
+\begin{align}
+\int_1 d\sigma^A = d\sigma^B \otimes \mathbf{I}.
+\end{align}
+
+Here, $\mathbf{I}$ is an operator acting on the Born matrix element,
+and it contains explicit poles in dimensional regularization:
+\begin{align}
+\mathbf{I} \sim \frac{1}{\epsilon^2} + \frac{1}{\epsilon}.
+\end{align}
+
+These poles match exactly the infrared divergences of the virtual
+contribution $d\sigma^V$.
+
+\subsection{Cancellation of divergences}
+
+The virtual contribution has the structure
+\begin{align}
+d\sigma^V \sim \frac{1}{\epsilon^2} + \frac{1}{\epsilon} + \text{finite}.
+\end{align}
+
+When combined with the integrated subtraction term, the poles cancel:
+\begin{align}
+d\sigma^V + \int_1 d\sigma^A = \text{finite}.
+\end{align}
+
+This cancellation ensures that the virtual contribution can be evaluated
+in four dimensions.
+
+\subsection{Initial-state collinear contributions}
+
+For hadronic processes, additional collinear singularities arise from
+initial-state radiation. These are absorbed into the parton distribution
+functions (PDFs) through mass factorization.
+
+This introduces additional terms, commonly denoted as $\mathbf{P}$ and
+$\mathbf{K}$ operators:
+\begin{align}
+\sigma^{\text{NLO}} \supset \int dx \, \left( \mathbf{P} + \mathbf{K} \right).
+\end{align}
+
+\begin{itemize}
+    \item The $\mathbf{P}$ term is related to Altarelli--Parisi splitting
+    functions and governs the scale dependence of PDFs.
+    \item The $\mathbf{K}$ term contains finite remainders from the
+    factorization procedure.
+\end{itemize}
+
+\subsection{Interpretation}
+
+The integrated dipoles complete the subtraction procedure:
+\begin{itemize}
+    \item they cancel the infrared poles of the virtual corrections,
+    \item they account for initial-state collinear singularities,
+    \item they ensure that the full NLO result is finite.
+\end{itemize}

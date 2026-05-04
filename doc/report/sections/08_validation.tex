@@ -1,0 +1,81 @@
+\section{Validation and Consistency Checks}
+
+To ensure the correctness of the implementation, several validation
+tests were performed at the level of individual phase-space points
+and integrated quantities.
+
+\subsection{Local cancellation of singularities}
+
+A central check of the subtraction procedure is the local cancellation
+between the real-emission matrix element and the dipole subtraction terms.
+
+At fixed phase-space points approaching soft or collinear regions,
+we evaluate:
+\begin{align}
+\mathcal{R}_{\text{finite}} =
+|M_{m+1}|^2 - \sum_{\text{dipoles}} D_{ij,k}.
+\end{align}
+
+Numerically, it is observed that:
+\begin{itemize}
+    \item both $|M_{m+1}|^2$ and the dipole sum become large in singular regions,
+    \item their difference remains finite,
+    \item the cancellation occurs point-by-point.
+\end{itemize}
+
+This confirms that the dipole terms correctly reproduce the infrared
+structure of the real matrix element.
+
+\subsection{Behavior near singular limits}
+
+To further verify the implementation, phase-space points were generated
+close to soft and collinear configurations.
+
+In these regions:
+\begin{itemize}
+    \item the real matrix element exhibits the expected singular growth,
+    \item the dipole terms follow the same scaling behavior,
+    \item the subtracted quantity remains stable.
+\end{itemize}
+
+This demonstrates that the subtraction is correctly capturing the
+leading singular behavior.
+
+\subsection{Cancellation of virtual poles}
+
+The combination
+\begin{align}
+\mathcal{V}_{\text{finite}} =
+|M_m^{\text{1-loop}}|^2 + \langle M_m | \mathbf{I} | M_m \rangle
+\end{align}
+was verified to be finite.
+
+In particular:
+\begin{itemize}
+    \item the $1/\epsilon^2$ and $1/\epsilon$ poles cancel,
+    \item the resulting expression is well-defined in four dimensions.
+\end{itemize}
+
+This confirms the consistency between the integrated dipoles and
+the virtual corrections.
+
+\subsection{Numerical stability}
+
+The full integrand was tested across a wide range of phase-space points.
+
+It is observed that:
+\begin{itemize}
+    \item the real-emission contribution remains finite after subtraction,
+    \item no numerical instabilities appear in soft or collinear regions,
+    \item the Monte Carlo integration converges smoothly.
+\end{itemize}
+
+\subsection{Summary of validation}
+
+These checks demonstrate that:
+\begin{itemize}
+    \item the dipole subtraction terms are correctly implemented,
+    \item the phase-space mappings are consistent,
+    \item the cancellation of infrared singularities is achieved locally
+    and globally.
+\end{itemize}

@@ -1,0 +1,39 @@
+Strict-local full NLO vs MATRIX status
+======================================
+
+Status: UPDATED
+
+Summary:
+  The local VA component has been validated and integrated at 1M, and the RA
+  component has now also been refreshed from a fresh local 100k all-channel rerun.
+  The assembled 8 TeV NLO total below therefore uses local inputs for LO, RA, CA,
+  and VA, with no MATRIX/OpenLoops executable calls during the assembly step.
+
+Relevant artifacts:
+  validation/local_ra_integral_all_channels_100k_refresh.txt
+  validation/va_virtual_state_audit.md
+  validation/va_replay_strict_local_final.txt
+  validation/local_va_integral_all_channels_1M.txt
+  validation/local_full_nlo_8tev_fresh_ra_strict_local_va.txt
+
+All-local component assembly:
+  LO        147766.442986761 +/- 390.296118154572 fb
+  RA        -5272.17796472053 +/- 124.132041618726 fb
+  CA        88683.3270958016 +/- 363.896431181217 fb
+  VA        -12987.5092056443 +/- 26.8417097946023 fb
+  total     218190.082912197 +/- 548.526128469816 fb
+
+MATRIX component reference:
+  LO        147924.244926326 +/- 315.559898119995 fb
+  RA        -5198.17247901198 +/- 123.251330056952 fb
+  CA        88865.0868768933 +/- 362.028299052911 fb
+  VA        -13020.9964999999 +/- 26.8910000000000 fb
+  total     218570.162824207 +/- 496.544615174158 fb
+
+Comparison:
+  local minus MATRIX RA    = -74.0054857085461 fb
+  RA combined error        = 174.927568202501 fb
+  RA pull                  = -0.423063594086412 sigma
+  local minus MATRIX total = -380.079912009765 fb
+  combined error           = 739.890173250421 fb
+  pull                     = -0.513697742923158 sigma

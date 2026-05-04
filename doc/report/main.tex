@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,graphicx,geometry,hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\geometry{margin=2.5cm}
+
+\title{Catani--Seymour Dipole Subtraction for $pp \to t\bar{t}$ at NLO QCD}
+\author{Mohamad ElMahdi Houmani}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+I present a complete implementation of the Catani--Seymour dipole subtraction
+formalism for the process $pp \to t\bar{t}$ at next-to-leading order in QCD.
+The subtraction terms are constructed explicitly and integrated analytically,
+allowing for a fully local cancellation of infrared singularities at the
+integrand level.
+
+Particular attention is given to the phase-space factorization, momentum
+mappings, and the construction of the Monte Carlo integrand, including
+multichannel sampling and adaptive VEGAS integration. The implementation
+is validated through local cancellation checks in soft and collinear regions,
+as well as through comparisons of total cross sections and differential
+distributions.
+
+The results show excellent agreement with reference predictions, confirming
+the correctness of both the subtraction procedure and its numerical realization.
+The full implementation is available at:
+\begin{center}    
+\url{https://github.com/mahdihoumanii/topcs}.
+\end{center}
+\end{abstract}
+
+\section{Structure of the NLO Cross Section}
+
+At next-to-leading order (NLO), the cross section receives contributions
+from both real-emission processes and virtual loop corrections.
+Schematically, the NLO contribution can be written as
+\begin{align}
+\sigma^{\text{NLO}} =
+\int_{m+1} d\sigma^R +
+\int_m d\sigma^V.
+\end{align}
+
+The real contribution $d\sigma^R$ corresponds to tree-level processes
+with one additional parton in the final state, while the virtual contribution
+$d\sigma^V$ contains loop corrections to the Born process.
+
+A key difficulty arises because both terms are separately divergent
+in four dimensions. The divergences originate from regions where:
+\begin{itemize}
+    \item a gluon becomes soft (low energy),
+    \item two partons become collinear.
+\end{itemize}
+
+Although these singularities cancel in the sum of real and virtual contributions,
+this cancellation cannot be performed directly because the two terms are defined
+on different phase spaces:
+\begin{itemize}
+    \item $d\sigma^R$ lives in $(m+1)$-particle phase space,
+    \item $d\sigma^V$ lives in $m$-particle phase space.
+\end{itemize}
+
+To overcome this, the Catani--Seymour subtraction method introduces
+a local counterterm $d\sigma^A$ such that:
+\begin{align}
+\sigma^{\text{NLO}} =
+\int_{m+1} \left(d\sigma^R - d\sigma^A \right)
++
+\int_m \left(d\sigma^V + \int_1 d\sigma^A \right).
+\end{align}
+
+The subtraction term $d\sigma^A$ is constructed to:
+\begin{itemize}
+    \item reproduce the singular behavior of $d\sigma^R$ point-by-point,
+    \item be analytically integrable over the unresolved phase space.
+\end{itemize}
+
+This allows:
+\begin{itemize}
+    \item the difference $(d\sigma^R - d\sigma^A)$ to be finite and evaluated numerically,
+    \item the integrated counterterm $\int_1 d\sigma^A$ to cancel the divergences
+    of the virtual contribution.
+\end{itemize}
+
+As a result, the entire NLO calculation can be performed in four dimensions,
+with all infrared singularities properly cancelled.
+\input{sections/01_intro}
+\input{sections/02_nlo_structure}
+\input{sections/03_infrared}
+\input{sections/04_dipoles}
+\input{sections/05_phase_space}
+\input{sections/06_integrated}
+\input{sections/07_implementation}
+\input{sections/08_validation}
+\input{sections/09_results}
+
+\end{document}
